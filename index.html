@@ -1,57 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDO List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hormuud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <div class="main">
-        <h1>ToDo <span>List App</span></h1>
-        <div class="child">
-            <input type="text" placeholder="Add New Task">
-            <button class="add">Add Task</button>
-            <ul class="tasks"></ul>
+    <div class="flex justfy-between boder-bottom-[2px] px-[20px] py-[30px]  items-center gap-40">
+        <img src="img/Logo.png" alt="">
+
+        <ul class="flex gap-5 items-center font-bold">
+            <li><a href="#">Home</a></li>
+            <li><a href="#"><select><option>Personal</option></select></a></li>
+            <li><a href="#"><select><option>Business</option></select></a></li>
+            <li><a href="#"><select><option>Who We Are</option></select></a></li>
+            <li><a href="#"><select><option>Media</option></select></a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+
+        <div class="flex ml-[11rem] items-center gap-3">
+            <a href="#"><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.7638 27.0023C14.5057 27.0023 14.2569 26.9009 14.0172 26.6981L13.9066 26.5874C12.0449 24.8909 10.2937 23.2498 8.65314 21.6639C5.48261 18.566 3.32591 16.2518 2.18304 14.7213C1.18764 13.3567 0.689941 12.0567 0.689941 10.8212C0.689941 8.68218 1.45492 6.82896 2.98489 5.26156C3.74066 4.50552 4.60702 3.92927 5.58399 3.53281C6.56096 3.13635 7.60244 2.93812 8.70844 2.93812C9.81444 2.93812 10.8651 3.14096 11.8605 3.54664C12.7453 3.91544 13.6762 4.46864 14.6532 5.20624C15.409 4.48708 16.2984 3.92927 17.3214 3.53281C18.3445 3.13635 19.409 2.93812 20.515 2.93812C22.6164 2.93812 24.4413 3.7126 25.9897 5.26156C27.5565 6.88428 28.3399 8.7375 28.3399 10.8212C28.3399 12.2411 27.916 13.5411 27.068 14.7213C25.8699 16.3256 23.6302 18.7596 20.3491 22.0235C18.3583 23.9966 16.7454 25.5548 15.5103 26.6981C15.2707 26.9009 15.0219 27.0023 14.7638 27.0023ZM8.70844 5.12326C7.04944 5.12326 5.66233 5.68568 4.54712 6.81052C3.4319 7.93536 2.87429 9.27226 2.87429 10.8212C2.87429 11.5773 3.22452 12.4347 3.92499 13.3936C4.90196 14.7028 6.71764 16.6667 9.37204 19.2852C10.9757 20.871 12.7638 22.5767 14.7361 24.4023C16.6348 22.5952 18.3859 20.8895 19.9896 19.2852C22.5703 16.6667 24.3399 14.7028 25.2984 13.3936C25.8699 12.656 26.1556 11.7985 26.1556 10.8212C26.1556 9.30914 25.5749 7.97224 24.4136 6.81052C23.8422 6.23888 23.2431 5.81476 22.6164 5.53816C21.9897 5.26156 21.2892 5.12326 20.515 5.12326C19.538 5.12326 18.621 5.32149 17.7638 5.71795C16.9067 6.11441 16.1832 6.67222 15.5933 7.39138C15.4274 7.61266 15.1878 7.74174 14.8744 7.77862C14.561 7.8155 14.2937 7.73252 14.0725 7.52968C12.985 6.64456 12.0403 6.02221 11.2384 5.66263C10.4366 5.30305 9.59324 5.12326 8.70844 5.12326Z" fill="#222222"/></svg></a>
+    
+            <a href="#"><svg width="32" height="27" viewBox="0 0 32 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_0_1)">
+                <path d="M22.3201 8.18594H17.8011C17.6433 7.31841 17.3003 6.53368 16.7719 5.83177C16.2435 5.12985 15.5889 4.57779 14.8081 4.17557C14.0273 3.77335 13.1874 3.57224 12.2883 3.57224C11.3892 3.57224 10.5453 3.77335 9.75667 4.17557C8.96801 4.57779 8.31342 5.12985 7.79289 5.83177C7.27237 6.53368 6.93325 7.31841 6.77551 8.18594H2.01985C1.8148 8.18594 1.63341 8.26086 1.47567 8.41071C1.31794 8.56055 1.23907 8.74589 1.23907 8.96672V23.6359C1.23907 24.2826 1.40075 24.882 1.7241 25.4341C2.04746 25.9861 2.48911 26.4239 3.04906 26.7472C3.60902 27.0706 4.21235 27.2322 4.85905 27.2322H19.4809C20.1276 27.2322 20.731 27.0706 21.2909 26.7472C21.8509 26.4239 22.2925 25.9861 22.6159 25.4341C22.9392 24.882 23.1009 24.2826 23.1009 23.6359V8.96672C23.1009 8.74589 23.026 8.56055 22.8761 8.41071C22.7263 8.26086 22.541 8.18594 22.3201 8.18594ZM12.2883 5.1338C13.2189 5.1338 14.0431 5.42166 14.7608 5.99739C15.4785 6.57311 15.9477 7.30263 16.1685 8.18594H8.38439C8.60522 7.30263 9.07842 6.57311 9.804 5.99739C10.5296 5.42166 11.3577 5.1338 12.2883 5.1338ZM21.5394 23.6359C21.5394 24.2038 21.3382 24.6888 20.936 25.091C20.5338 25.4932 20.0488 25.6943 19.4809 25.6943H4.85905C4.29121 25.6943 3.80618 25.4932 3.40396 25.091C3.00174 24.6888 2.80063 24.2038 2.80063 23.6359V9.72384H6.68087V13.1782H8.24243V9.72384H16.3105V13.1782H17.8721V9.72384H21.5394V23.6359Z" fill="#222222"/>
+                </g>
+                <rect x="17" width="15" height="15" rx="7.5" fill="#00A550"/>
+                <path d="M24.652 11.1246C24.1257 11.1246 23.674 10.9915 23.2969 10.7251C22.9219 10.4567 22.6332 10.07 22.4308 9.56499C22.2305 9.05788 22.1303 8.44744 22.1303 7.73366C22.1325 7.01989 22.2337 6.41264 22.4339 5.91193C22.6364 5.40909 22.9251 5.02557 23.3001 4.76136C23.6772 4.49716 24.1278 4.36506 24.652 4.36506C25.1761 4.36506 25.6268 4.49716 26.0039 4.76136C26.381 5.02557 26.6697 5.40909 26.87 5.91193C27.0724 6.41477 27.1736 7.02202 27.1736 7.73366C27.1736 8.44957 27.0724 9.06108 26.87 9.56818C26.6697 10.0732 26.381 10.4588 26.0039 10.7251C25.6289 10.9915 25.1783 11.1246 24.652 11.1246ZM24.652 10.1243C25.0611 10.1243 25.3839 9.92294 25.6204 9.52024C25.859 9.11541 25.9783 8.51989 25.9783 7.73366C25.9783 7.21378 25.924 6.77699 25.8153 6.4233C25.7067 6.0696 25.5533 5.80327 25.3551 5.62429C25.157 5.44318 24.9226 5.35263 24.652 5.35263C24.245 5.35263 23.9233 5.55504 23.6868 5.95987C23.4503 6.36257 23.331 6.95384 23.3288 7.73366C23.3267 8.25568 23.3789 8.6946 23.4854 9.05043C23.5941 9.40625 23.7475 9.67472 23.9457 9.85582C24.1438 10.0348 24.3793 10.1243 24.652 10.1243Z" fill="white"/>
+                <a href="https://www.figma.com/design/XsKMtRV8M532Xicm8kLtck/Untitled?node-id=1-2">
+                <rect fill="black" fill-opacity="0" x="-0.0490899" y="0.0539775" width="6.00213" height="10.892"/>
+                </a>
+                <defs>
+                <clipPath id="clip0_0_1">
+                <rect width="23.66" height="24" fill="white" transform="matrix(1 0 0 -1 0.339966 27)"/>
+                </clipPath>
+                </defs>
+                </svg></a>
+                
+                
         </div>
+    </div>
+
+    <!--  -->
+
+    <div class="flex w-[100%] h-[81vh] bg-gray-200 ">
+        <img class="w-[100%]" src="img/Section.png" alt="">
+    </div>
+
+    <!-- section 2------------------- -->
+
+    <div class="mt-[-7%] ml-[8%] flex justfy-between">
+        <!-- 1 -->
+        <!-- 1 -->
+        <div class=" ml-[30px] shadow-md border border-gray-200 bg-white width-[20%] h-[15%] flex rounded-[10px] p-[10px]">
+            <img src="img/WifiIcon.svg.png" alt="">
+            <div class="mt-[20px]">
+                <h1 class="font-bold ">Fiber Internet</h1>
+                <p>Broadband for your home<br>and office</p>
+            </div>
+        </div>
+                <!-- 1 -->
+        <!-- 1 -->
+        <div class=" ml-[30px] shadow-md border border-gray-200 bg-white width-[20%] h-[15%] flex rounded-[10px] p-[10px]">
+            <img src="img/WifiIcon.svg.png" alt="">
+            <div class="mt-[20px]">
+                <h1 class="font-bold ">Fiber Internet</h1>
+                <p>Broadband for your home<br>and office</p>
+            </div>
+        </div>
+                <!-- 1 -->
+        <!-- 1 -->
+        <div class=" ml-[30px] shadow-md border border-gray-200 bg-white width-[20%] h-[15%] flex rounded-[10px] p-[10px]">
+            <img src="img/WifiIcon.svg.png" alt="">
+            <div class="mt-[20px]">
+                <h1 class="font-bold ">Fiber Internet</h1>
+                <p>Broadband for your home<br>and office</p>
+            </div>
+        </div>
+
+        
     </div>
 
 
 
-    <script>
-        let taskInput = document.querySelector(".child input");
-        let addButton = document.querySelector(".add");
-        let tasks = document.querySelector(".tasks");
 
-        addButton.onclick = function() {
-            console.log(taskInput.value)
-            if (taskInput.value === '') {
-                alert("please Enter a Task")
-            } else {
-                tasks.innerHTML += `
-          <li class="task">
-          <span onclick = "this.classlist.toggle('completed')">
-          ${taskInput.value}
-          </span>
-          <button class="delete">
-          <i class="fa-solid fa-trash"></i>
-          </button>
-          </li>
-        `;
-                console.log(taskInput.value)
-                taskInput.value = "";
-                let currentTask = document.querySelector('.delete');
-                for (let i = 0; i < currentTask.length; i++) {
-                    currentTask[i].onclick = function() {
-                        this.parentNode.remove();
-                    };
+    <div class="flex mt-[100px]">
+        <img class="w-[50%] ml-[10%]" src="img/Figure.png" alt="">
+        <div class="mt-[10%]">
+            <h1 class="font-bold text-[30px]">Talk longer for less</h1>
+            <p>With 100 minutes of calls from as little as $1, never leave a story<br>
+                untold when you opt for one of Hormuud’s local packages
+            </p>
+            <button class="bg-green-600 px-[10px] py-[7px] text-white font-bold mt-[10px]">Get Started Now</button>
+        </div>
+    </div>
+    <!-- ____________________________________________________________________________section3 -->
 
-                }
-            }
-        }
-    </script>
+    <div class="text-center">
+        <h1 class="font-bold text-[20px]">Our customers’ favourite personal products</h1>
+        <p class="items-center">Here are some of our customers’ favorite personal products & services</p>
+    </div>
+
+
+    <div class="flex">
+        <div class="w-[30px] bg-green-600 h-[40%]">
+            
+        </div>
+    </div>
+
+    
 </body>
-
 </html>
