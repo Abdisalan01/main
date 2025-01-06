@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>ToDo <span>List App</span></h1>
+        <div class="child">
+            <input type="text" placeholder="Add New Task">
+            <button class="add">Add Task</button>
+            <ul class="tasks"></ul>
+        </div>
+    </div>
+
+
+
+    <script>
+        let taskInput = document.querySelector(".child input");
+        let addButton = document.querySelector(".add");
+        let tasks = document.querySelector(".tasks");
+
+        addButton.onclick = function() {
+            console.log(taskInput.value)
+            if (taskInput.value === '') {
+                alert("please Enter a Task")
+            } else {
+                tasks.innerHTML += `
+          <li class="task">
+          <span onclick = "this.classlist.toggle('completed')">
+          ${taskInput.value}
+          </span>
+          <button class="delete">
+          <i class="fa-solid fa-trash"></i>
+          </button>
+          </li>
+        `;
+                console.log(taskInput.value)
+                taskInput.value = "";
+                let currentTask = document.querySelector('.delete');
+                for (let i = 0; i < currentTask.length; i++) {
+                    currentTask[i].onclick = function() {
+                        this.parentNode.remove();
+                    };
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
